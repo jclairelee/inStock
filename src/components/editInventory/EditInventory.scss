@@ -1,0 +1,541 @@
+@use "../../styles/partials/breakpoints" as breakpoint;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/fonts" as *;
+
+.itemName-Valid {
+  position: relative;
+  display: none;
+  &__img {
+    position: relative;
+    top: 4px;
+    width: 16px;
+  }
+  &__text {
+    color: red;
+    font-family: "TitilliumWeb";
+    font-size: 0.75rem;
+    font-weight: 400;
+    padding-left: 0.2rem;
+  }
+}
+.qty-Valid {
+  position: relative;
+  display: none;
+  &__img {
+    position: relative;
+    top: 4px;
+    width: 16px;
+  }
+  &__text {
+    color: red;
+    font-family: "TitilliumWeb";
+    font-size: 0.75rem;
+    font-weight: 400;
+    padding-left: 0.2rem;
+  }
+}
+.des-Valid {
+  position: relative;
+  display: none;
+  &__img {
+    position: relative;
+    top: 4px;
+    width: 16px;
+  }
+  &__text {
+    color: red;
+    font-family: "TitilliumWeb";
+    font-size: 0.75rem;
+    font-weight: 400;
+    padding-left: 0.2rem;
+  }
+}
+
+select {
+  width: 100%;
+  height: 2.25rem;
+  border-radius: 1.25rem;
+  appearance: none;
+  border: 1px solid $secondaryLight;
+  background-image: url("../../assets/icons/arrow_drop_down-24px.svg");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-left: 1rem;
+  margin-top: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+.sample {
+  display: none;
+}
+.editInventoryForm{
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+  border-radius: 3px;
+  background-color: #ffffff;
+
+  @include breakpoint.small {
+    margin: 0 1rem;
+    margin-top: -67px;
+  }
+
+   @include breakpoint.medium {
+    margin: 0 2rem;
+    margin-top: -96px;
+  }
+
+  @include breakpoint.large {
+   margin: 0 8.125rem;
+   margin-top: -96px;
+  }}
+
+
+.editInventoryForm {
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+
+  border-radius: 3px;
+  background-color: #ffffff;
+
+  @include breakpoint.small {
+    margin: 0 1rem;
+    margin-top: -67px;
+  }
+
+  @include breakpoint.medium {
+    margin: 0 2rem;
+    margin-top: -97px;
+  }
+
+  @include breakpoint.large {
+    margin: 0 8.125rem;
+    margin-top: -97px;
+  }
+
+  &__title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 2.25rem;
+    color: $primaryDark;
+    padding: 2rem 3.5rem 1.5rem;
+    border-bottom: 1px solid $secondaryLight;
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__subtitle {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    color: $primaryDark;
+    margin-bottom: 1.5rem;
+  }
+  
+  &__itemdetails {
+    padding: 1rem 1.5rem 0;
+    border-bottom: 1px solid $secondaryLight;
+  }
+  &__itemavailability {
+    padding: 1rem 1.5rem 0;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__detail {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  &__label {
+    font-weight: 600;
+    font-size: 0.813rem;
+    line-height: 1.25rem;
+    &-radio {
+      font-size: 0.813rem;
+      line-height: 1.25rem;
+    }
+  }
+  &__input {
+    width: 100%;
+    height: 2.25rem;
+    border-radius: 1.25rem;
+    border: 1px solid $secondaryLight;
+    margin-top: 0.25rem;
+    padding: 0.5rem 1rem;
+    &-description {
+      height: 7.5rem;
+    }
+    &-radioContainer {
+      display: flex;
+      margin-bottom: 1rem;
+    }
+    &-radioStock {
+      margin-right: 2.5rem;
+      margin-top: 0.375rem;
+    }
+    &-radio {
+      height: 1rem;
+      width: 1rem;
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 4.25rem;
+    background-color: $backgroundLight;
+  }
+
+  &__btncancel {
+    height: 2.25rem;
+    width: 8.6rem;
+    border-radius: 1.25rem;
+    border: 1px solid $secondaryLight;
+    padding: 0.5rem 3.188rem;
+    font-size: 0.813rem;
+    font-family: "TitilliumWeb";
+    font-weight: 600;
+    background-color: $primaryLight;
+  }
+  &__btnsave {
+    height: 2.25rem;
+    width: 8.6rem;
+    border-radius: 1.25rem;
+    border: 1px solid $secondaryLight;
+    padding: 0.5rem 3.188rem;
+    font-size: 0.813rem;
+    font-family: "TitilliumWeb";
+    font-weight: 600;
+    color: $primaryLight;
+    background-color: $primaryMedium;
+    opacity: 1;
+  }
+
+  &__btncancel:hover {
+    border: 1px solid $primaryMedium;
+    color: $primaryMedium;
+  }
+  &__btnsave:hover {
+    background-color: $backgroundDark;
+  }
+}
+
+@include breakpoint.medium {
+
+  .editInventoryForm {
+    &__title-text {
+      margin-left: 0.75rem;
+    }
+    &__title {
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 2.5rem;
+      color: $primaryDark;
+      padding-left: 4rem;
+      border-bottom: 1px solid $secondaryLight;
+      display: flex;
+    }
+    &__content {
+      display: flex;
+      flex-direction: row;
+      margin-top: 1.5rem;
+    }
+    &__subtitle {
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 600;
+      color: $primaryDark;
+    }
+    &__container {
+      display: flex;
+      flex-direction: column;
+    }
+    &__detail {
+      display: flex;
+      flex-direction: column;
+      margin-top: 1rem;
+    }
+    &__label {
+      font-weight: 600;
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+      &-radio {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+      }
+    }
+    &__input {
+      width: 100%;
+      height: 2.375rem;
+      border-radius: 1.25rem;
+      border: 1px solid $secondaryLight;
+      margin-top: 0.25rem;
+
+      padding: 0.5rem 1rem;
+      &-description {
+        height: 7.5rem;
+      }
+    }
+    &__itemdetails {
+      width: 50%;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-bottom: 2rem;
+      padding-top: 0;
+      border: none;
+    }
+
+    &__itemavailability {
+      width: 50%;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-bottom: 2rem;
+      padding-top: 0;
+      border-left: 1px solid $secondaryLight;
+    }
+    &__btns {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      height: 4.25rem;
+      margin-top: 1rem;
+      padding-right: 2rem;
+      background-color: $backgroundLight;
+    }
+
+    &__btncancel {
+      margin-right: 1rem;
+      height: 2.375rem;
+      width: 4.5rem;
+      border-radius: 1.25rem;
+      border: 1px solid $secondaryLight;
+      padding: 0.5rem 1rem;
+      line-height: 1.375rem;
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+      font-family: "TitilliumWeb";
+      font-weight: 600;
+      background-color: $primaryLight;
+    }
+    &__btnsave {
+      height: 2.375rem;
+      width: 4.5rem;
+      border-radius: 1.25rem;
+      border: 1px solid $secondaryLight;
+      padding: 0.5rem 1rem;
+      line-height: 1.375rem;
+      font-size: 0.875rem;
+      font-family: "TitilliumWeb";
+      font-weight: 600;
+      color: $primaryLight;
+      background-color: $primaryMedium;
+      opacity: 1;
+    }
+  }
+}
+
+@include breakpoint.large {
+  .editInventoryForm {
+    &__title-text {
+      margin-left: 0.75rem;
+    }
+    &__title {
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 2.5rem;
+      color: $primaryDark;
+      padding-left: 4rem;
+      border-bottom: 1px solid $secondaryLight;
+      display: flex;
+      align-items: baseline;
+    }
+    &__content {
+      display: flex;
+      flex-direction: row;
+      margin-top: 1.5rem;
+    }
+    &__subtitle {
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 600;
+      color: $primaryDark;
+    }
+    &__container {
+      display: flex;
+      flex-direction: column;
+    }
+    &__detail {
+      display: flex;
+      flex-direction: column;
+    }
+    &__label {
+      font-weight: 600;
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+      &-radio {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+      }
+    }
+    &__input {
+      width: 100%;
+      height: 2.375rem;
+      border-radius: 1.25rem;
+      border: 1px solid $secondaryLight;
+      margin-top: 0.25rem;
+
+      padding: 0.5rem 1rem;
+      &-description {
+        height: 7.5rem;
+      }
+    }
+    &__itemdetails {
+      width: 50%;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+      padding-bottom: 2rem;
+      padding-top: 0;
+      border: none;
+    }
+
+    &__itemavailability {
+      width: 50%;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+      padding-bottom: 2rem;
+      padding-top: 0;
+      border-left: 1px solid $secondaryLight;
+    }
+    &__btns {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      height: 4.375rem;
+      margin-top: 1rem;
+      padding-right: 2.5rem;
+      background-color: $backgroundLight;
+    }
+
+    &__btncancel {
+      margin-right: 1rem;
+      height: 2.375rem;
+      width: 4.5rem;
+      border-radius: 1.25rem;
+      border: 1px solid $secondaryLight;
+      padding: 0.5rem 1rem;
+      line-height: 1.375rem;
+
+      &__title-text {
+        margin-left: 0.75rem;
+      }
+      &__title {
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 2.5rem;
+        color: $primaryDark;
+        padding-left: 4rem;
+        border-bottom: 1px solid $secondaryLight;
+        align-items: baseline;
+      }
+      &__content {
+        display: flex;
+        flex-direction: row;
+        margin-top: 1.5rem;
+      }
+      &__subtitle {
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 600;
+        color: $primaryDark;
+      }
+      &__container {
+        display: flex;
+        flex-direction: column;
+      }
+      &__detail {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+      }
+      &__label {
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+        &-radio {
+          font-size: 0.875rem;
+          line-height: 1.375rem;
+        }
+      }
+      &__input {
+        width: 100%;
+        height: 2.375rem;
+        border-radius: 1.25rem;
+        border: 1px solid $secondaryLight;
+        margin-top: 0.25rem;
+        margin-bottom: 1.4rem;
+        padding: 0.5rem 1rem;
+        &-description {
+          height: 7.5rem;
+        }
+      }
+      &__itemdetails {
+        width: 50%;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        padding-bottom: 2rem;
+        padding-top: 0;
+        border: none;
+      }
+
+      &__itemavailability {
+        width: 50%;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        padding-bottom: 2rem;
+        padding-top: 0;
+        border-left: 1px solid $secondaryLight;
+      }
+      &__btns {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 4.375rem;
+        margin-top: 1rem;
+        padding-right: 2.5rem;
+        background-color: $backgroundLight;
+      }
+
+      &__btncancel {
+        margin-right: 1rem;
+        height: 2.375rem;
+        width: 4.5rem;
+        border-radius: 1.25rem;
+        border: 1px solid $secondaryLight;
+        padding: 0.5rem 1rem;
+        line-height: 1.375rem;
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+        font-family: "TitilliumWeb";
+        font-weight: 600;
+        background-color: $primaryLight;
+      }
+      &__btnsave {
+        height: 2.375rem;
+        width: 3.82rem;
+        border-radius: 20px;
+        border: 1px solid $secondaryLight;
+        padding: 0.5rem 1rem;
+        line-height: 1.375rem;
+        font-size: 0.875rem;
+        font-family: "TitilliumWeb";
+        font-weight: 600;
+        color: $primaryLight;
+        background-color: $primaryMedium;
+        opacity: 1;
+      }
+    }
+  }
+}

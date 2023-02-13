@@ -1,0 +1,833 @@
+@use "../../styles/partials/breakpoints" as bkp;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/fonts" as *;
+
+html,
+body {
+  margin: 0;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.backgroundParent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  background-color: rgba(19, 24, 44, 0.9);
+  display: none;
+}
+.warehouseDetail__nameContainer-edit:hover {
+  background-color: #232940;
+}
+// for mobile
+
+@include bkp.small {
+  .warehouseDetail {
+    margin: 0 1rem;
+    background: #ffffff;
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    border-radius: 3px;
+    margin-top: -59px;
+
+    &__nameContainer {
+      display: flex;
+      justify-content: space-between;
+      padding: 1.5rem 1rem;
+      border-bottom: 1px solid #bdc5d5;
+
+      &-arrow {
+        width: 25px;
+        height: 25px;
+        margin-right: 0.625rem;
+        position: relative;
+        top: 3px;
+      }
+
+      &-name {
+        width: 145px;
+        height: 36px;
+        font-family: "TitilliumWeb";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 36px;
+      }
+
+      &-edit {
+        width: 36px;
+        height: 36px;
+        background: #2e66e6;
+        border-radius: 20px;
+        border-color: transparent;
+        position: relative;
+
+        &-text {
+          visibility: hidden;
+        }
+      }
+    }
+
+    &__info {
+      padding: 1rem 1rem;
+      border-bottom: 1px solid #bdc5d5;
+
+      &-address {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 1.5rem;
+      }
+
+      &-tag {
+        font-family: "TitilliumWeb";
+        font-style: normal;
+        font-weight: 600;
+        color: #5c667e;
+        text-transform: uppercase;
+        font-size: 11px;
+        line-height: 16px;
+      }
+
+      &-text {
+        font-family: "TitilliumWeb";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+        color: #13182c;
+      }
+
+      &-contanct {
+        display: flex;
+        justify-content: space-between;
+
+        &-nameWrap {
+          display: flex;
+          flex-direction: column;
+          width: 140px;
+          align-items: flex-start;
+        }
+
+        &-detailWrap {
+          display: flex;
+          flex-direction: column;
+          width: 140px;
+          align-items: flex-start;
+        }
+      }
+    }
+
+    &__item {
+      padding: 1rem 1rem;
+      border-bottom: 1px solid #bdc5d5;
+
+      &-bar {
+        visibility: hidden;
+        height: 0;
+        width: 0;
+      }
+    }
+
+    &__item-info-wrap {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 1rem;
+    }
+
+    &__item-info-contanier {
+      display: flex;
+      flex-direction: column;
+      width: 140px;
+      align-items: flex-start;
+    }
+
+    &__item-info-tag {
+      font-family: "TitilliumWeb";
+      font-style: normal;
+      font-weight: 600;
+      color: #5c667e;
+      text-transform: uppercase;
+      font-size: 11px;
+      line-height: 16px;
+    }
+
+    &__item-info-nameWrap {
+      position: relative;
+    }
+
+    &__item-info-name {
+      font-family: "TitilliumWeb";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 20px;
+      color: #2e66e6;
+    }
+
+    &__item-info-image {
+      width: 20px;
+      position: absolute;
+      top: 4px;
+      right: -29px;
+    }
+
+    &__item-info-status {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 4px 8px;
+      width: 66px;
+      height: 24px;
+      background: rgba(21, 132, 99, 0.07);
+      border-radius: 20px;
+      font-family: "TitilliumWeb";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 16px;
+      text-transform: uppercase;
+      color: #158463;
+      text-align: center;
+    }
+
+    &__item-info-statusTwo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 4px 8px;
+      width: 95px;
+      height: 24px;
+      background: rgba(201, 69, 21, 0.07);
+      border-radius: 20px;
+      font-family: "TitilliumWeb";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 16px;
+      text-transform: uppercase;
+      color: #c94515;
+      text-align: center;
+    }
+
+    &__item-info-category {
+      font-family: "TitilliumWeb";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+      color: #13182c;
+    }
+
+    &__item-info-num {
+      font-family: "TitilliumWeb";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+      color: #13182c;
+    }
+
+    &__item-info-actions {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .warehouseDetail__item-info-Tablet {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+
+  .warehouseDetail__nameContainer-editImage {
+    fill: white;
+    position: absolute;
+    top: 5px;
+    left: 8px;
+    width: 22px;
+    height: 22px;
+  }
+}
+
+// for tablet
+
+@include bkp.medium {
+  .warehouseDetail {
+    margin: 0 2rem;
+    padding: 0 1.5rem;
+    background: #ffffff;
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    border-radius: 3px;
+    margin-top: -86px;
+
+    &__nameContainer {
+      display: flex;
+      justify-content: space-between;
+      padding: 1.5rem 1.5rem;
+      border-bottom: 1px solid #bdc5d5;
+
+      &-arrow {
+        width: 25px;
+        height: 25px;
+        margin-right: 0.625rem;
+        position: relative;
+        top: 3px;
+      }
+
+      &-name {
+        width: 145px;
+        height: 36px;
+        font-family: "TitilliumWeb";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 36px;
+      }
+
+      &-edit {
+        width: 81px;
+        height: 38px;
+        background: #2e66e6;
+        border-radius: 20px;
+        border-color: transparent;
+        text-align: center;
+        position: relative;
+
+        &-text {
+          color: #ffffff;
+          font-family: "TitilliumWeb";
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 22px;
+          position: absolute;
+          top: 8px;
+        }
+      }
+    }
+
+    &__info {
+      padding: 1.5rem 1.5rem;
+      display: flex;
+      justify-content: flex-start;
+
+      &-address {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 30%;
+        text-align: left;
+      }
+
+      &-tag {
+        font-family: "TitilliumWeb";
+        font-style: normal;
+        font-weight: 600;
+        color: #5c667e;
+        text-transform: uppercase;
+        font-size: 11px;
+        line-height: 16px;
+        padding-bottom: 4px;
+      }
+
+      &-text {
+        font-family: "TitilliumWeb";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+        color: #13182c;
+      }
+
+      &-contanct {
+        display: flex;
+        padding-left: 7%;
+        border-left: 1px solid #bdc5d5;
+        width: 65%;
+
+        &-nameWrap {
+          display: flex;
+          flex-direction: column;
+          width: 40%;
+          align-items: flex-start;
+        }
+
+        &-detailWrap {
+          display: flex;
+          flex-direction: column;
+          width: 140px;
+          align-items: flex-start;
+        }
+      }
+    }
+
+    &__item {
+      border-bottom: 1px solid #bdc5d5;
+
+      &-bar {
+        padding: 1rem 1.5rem;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        background: rgba(247, 248, 249, 0.7);
+
+        &-wrap {
+          position: relative;
+          width: 20%;
+          text-align: left;
+        }
+
+        &-icon {
+          width: 16.12px;
+          height: 12px;
+          position: absolute;
+          top: 5px;
+        }
+
+        &-text {
+          font-family: "TitilliumWeb";
+          font-style: normal;
+          font-weight: 600;
+          color: #5c667e;
+          text-transform: uppercase;
+          font-size: 12px;
+          line-height: 18px;
+        }
+
+        &-textTable {
+          font-family: "TitilliumWeb";
+          font-style: normal;
+          font-weight: 600;
+          color: #5c667e;
+          text-transform: uppercase;
+          font-size: 12px;
+          line-height: 18px;
+        }
+
+        &-textDesk {
+          display: none;
+        }
+      }
+
+      &-info {
+        visibility: hidden;
+        height: 0;
+      }
+
+      &-info-Tablet {
+        padding: 1rem 1.5rem;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &__item-info-nameWrap {
+      display: flex;
+      width: 21%;
+      position: relative;
+    }
+
+    &__item-info-name {
+      font-family: "TitilliumWeb";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 20px;
+      color: #2e66e6;
+      padding-right: 4px;
+    }
+
+    &__item-info-image {
+      width: 20px;
+      position: absolute;
+      top: 12%;
+    }
+
+    &__item-info-status-wrap {
+      width: 28%;
+    }
+    &__item-info-status {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 4px 8px;
+      width: 68px;
+      height: 24px;
+      background: rgba(21, 132, 99, 0.07);
+      border-radius: 20px;
+      font-family: "TitilliumWeb";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 16px;
+      text-transform: uppercase;
+      color: #158463;
+      text-align: center;
+    }
+
+    &__item-info-statusTwo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 4px 8px;
+      width: 93px;
+      height: 24px;
+      background: rgba(201, 69, 21, 0.07);
+      border-radius: 20px;
+      font-family: "TitilliumWeb";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 16px;
+      text-transform: uppercase;
+      color: #c94515;
+      text-align: center;
+    }
+
+    &__item-info-category {
+      font-family: "TitilliumWeb";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+      color: #13182c;
+      width: 19%;
+      text-align: left;
+    }
+
+    &__item-info-num {
+      font-family: "TitilliumWeb";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+      color: #13182c;
+      width: 25%;
+      text-align: left;
+    }
+
+    &__item-info-actions {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 0.5rem;
+      width: 9%;
+    }
+  }
+
+  .warehouseDetail__item-bar-wrap.status {
+    width: 23%;
+    margin-right: 3%;
+  }
+
+  .warehouseDetail__item-bar-wrap.quantity {
+    margin-right: 16%;
+  }
+
+  .warehouseDetail__nameContainer-editImage {
+    fill: white;
+    position: absolute;
+    top: 8px;
+    left: 14px;
+    width: 22px;
+    height: 22px;
+  }
+}
+
+// for desktop
+
+@include bkp.large {
+  .warehouseDetail {
+    margin: 0 8.125rem;
+    padding: 0 1.5rem;
+    background: #ffffff;
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    border-radius: 3px;
+    margin-top: -86px;
+
+    &__nameContainer {
+      display: flex;
+      justify-content: space-between;
+      padding: 1.5rem 1.5rem;
+      border-bottom: 1px solid #bdc5d5;
+
+      &-arrow {
+        width: 25px;
+        height: 25px;
+        margin-right: 0.625rem;
+        position: relative;
+        top: 3px;
+      }
+
+      &-name {
+        width: 145px;
+        height: 36px;
+        font-family: "TitilliumWeb";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 36px;
+      }
+
+      &-edit {
+        width: 81px;
+        height: 38px;
+        background: #2e66e6;
+        border-radius: 20px;
+        border-color: transparent;
+        text-align: center;
+        position: relative;
+
+        &-text {
+          color: #ffffff;
+          font-family: "TitilliumWeb";
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 22px;
+          position: absolute;
+          top: 8px;
+        }
+      }
+    }
+
+    &__info {
+      padding: 1.5rem 1.5rem;
+      display: flex;
+      justify-content: flex-start;
+
+      &-address {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 150px;
+        text-align: left;
+        margin-right: 17%;
+      }
+
+      &-tag {
+        font-family: "TitilliumWeb";
+        font-style: normal;
+        font-weight: 600;
+        color: #5c667e;
+        text-transform: uppercase;
+        font-size: 11px;
+        line-height: 16px;
+        padding-bottom: 4px;
+      }
+
+      &-text {
+        font-family: "TitilliumWeb";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+        color: #13182c;
+      }
+
+      &-contanct {
+        display: flex;
+        padding-left: 7%;
+        border-left: 1px solid #bdc5d5;
+        width: 65%;
+
+        &-nameWrap {
+          display: flex;
+          flex-direction: column;
+          width: 40%;
+          align-items: flex-start;
+        }
+
+        &-detailWrap {
+          display: flex;
+          flex-direction: column;
+          width: 140px;
+          align-items: flex-start;
+        }
+      }
+    }
+
+    &__item {
+      border-bottom: 1px solid #bdc5d5;
+
+      &-bar {
+        padding: 1rem 1.5rem;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        background: rgba(247, 248, 249, 0.7);
+
+        &-wrap {
+          position: relative;
+          width: 20%;
+          text-align: left;
+        }
+
+        &-icon {
+          width: 16.12px;
+          height: 12px;
+          position: absolute;
+          top: 5px;
+        }
+
+        &-text {
+          font-family: "TitilliumWeb";
+          font-style: normal;
+          font-weight: 600;
+          color: #5c667e;
+          text-transform: uppercase;
+          font-size: 12px;
+          line-height: 18px;
+        }
+
+        &-textTable {
+          display: none;
+        }
+
+        &-textDesk {
+          font-family: "TitilliumWeb";
+          font-style: normal;
+          font-weight: 600;
+          color: #5c667e;
+          text-transform: uppercase;
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+
+      &-info {
+        visibility: hidden;
+        height: 0;
+      }
+
+      &-info-Tablet {
+        padding: 1rem 1.5rem;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &__item-info-nameWrap {
+      display: flex;
+      width: 20%;
+      position: relative;
+    }
+
+    &__item-info-name {
+      font-family: "TitilliumWeb";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 20px;
+      color: #2e66e6;
+      padding-right: 4px;
+    }
+
+    &__item-info-image {
+      width: 20px;
+      position: absolute;
+      top: 12%;
+    }
+
+    &__item-info-status-wrap {
+      width: 27%;
+    }
+    &__item-info-status {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 4px 8px;
+      width: 68px;
+      height: 24px;
+      background: rgba(21, 132, 99, 0.07);
+      border-radius: 20px;
+      font-family: "TitilliumWeb";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 16px;
+      text-transform: uppercase;
+      color: #158463;
+      text-align: center;
+    }
+
+    &__item-info-statusTwo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 4px 8px;
+      width: 93px;
+      height: 24px;
+      background: rgba(201, 69, 21, 0.07);
+      border-radius: 20px;
+      font-family: "TitilliumWeb";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 16px;
+      text-transform: uppercase;
+      color: #c94515;
+      text-align: center;
+    }
+
+    &__item-info-category {
+      font-family: "TitilliumWeb";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+      color: #13182c;
+      width: 20%;
+      text-align: left;
+    }
+
+    &__item-info-num {
+      font-family: "TitilliumWeb";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+      color: #13182c;
+      width: 25%;
+      text-align: left;
+    }
+
+    &__item-info-actions {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 0.5rem;
+      width: 9%;
+    }
+  }
+
+  .warehouseDetail__item-bar-wrap.status {
+    width: 23%;
+    margin-right: 3%;
+  }
+
+  .warehouseDetail__item-bar-wrap.quantity {
+    margin-right: 13%;
+  }
+
+  .warehouseDetail__nameContainer-editImage {
+    fill: white;
+    position: absolute;
+    top: 8px;
+    left: 14px;
+    width: 22px;
+    height: 22px;
+  }
+}

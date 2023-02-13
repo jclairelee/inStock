@@ -1,0 +1,131 @@
+@use "../../styles/partials/colors" as cl;
+@use "../../styles/partials/fonts";
+@use "../../styles/partials/breakpoints" as bk;
+@use "../../styles/partials/global";
+
+.delete {
+  padding: 1rem;
+   width:100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  background-color: white;
+  z-index: 99;
+
+  &__icon {
+    display: flex;
+    flex-direction: column;
+    &-wrapper {
+      display: flex;
+      justify-content: right;
+    }
+  }
+  &__title {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    font-weight: 600;
+    padding-top: 1rem;
+  }
+  &__text {
+    font-size: 0.95rem;
+    line-height: 1.625rem;
+
+    &-wrapper {
+      padding: 2rem 0;
+    }
+  }
+  &__btn {
+    width: 163px;
+    height: 36px;
+    border-radius: 20px;
+
+    &-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-top: 18rem;
+    }
+    &--cancel {
+      background-color: cl.$primaryLight;
+      border: 1px solid cl.$secondaryLight;
+      color: cl.$secondraryDark;
+      font-weight: 600;
+    }
+    &--delete {
+      background: cl.$outOfStock;
+      border: 1px solid cl.$outOfStock;
+      color: cl.$primaryLight;
+      font-weight: 600;
+    }
+    &--cancel:hover {
+      border: 1px solid cl.$primaryMedium;
+      color: cl.$primaryMedium;
+    }
+    &--delete:hover {
+    background-color: cl.$backgroundDark;
+    }
+  }
+}
+
+@include bk.medium {
+  .delete {
+    width: 42rem;
+    height: 16.375rem;
+    display: none;
+    position: absolute;
+    top: 31%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+
+    &__title {
+      padding: 0 3rem;
+    }
+    &__text {
+      font-size: 1rem;
+      padding: 0 3rem;
+    }
+    &__btn {
+      width: 72px;
+      height: 32px;
+      margin-right: 1rem;
+      &-wrapper {
+        padding-top: 0;
+        justify-content: right;
+        margin-right: 2rem;
+      }
+    }
+  }
+}
+
+@include bk.large {
+  .delete {
+    width: 42rem;
+    height: 16.375rem;
+     top: 31%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__title {
+      padding: 0 3rem;
+    }
+    &__text {
+      font-size: 1rem;
+      padding: 0 3rem;
+    }
+    &__btn {
+      width: 72px;
+      height: 32px;
+      margin-right: 1rem;
+      &-wrapper {
+        padding-top: 0;
+        justify-content: right;
+        margin-right: 2rem;
+      }
+    }
+  }
+}

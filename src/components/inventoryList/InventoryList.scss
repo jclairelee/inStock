@@ -1,0 +1,844 @@
+@use "../../styles/partials/breakpoints" as bk;
+@use "../../styles/partials/colors" as cl;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/global" as *;
+
+.invList {
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+  border-radius: 3px;
+  background-color: #ffffff;
+
+   @include bk.small {
+    margin: 0 1rem;
+    margin-top: -67px;
+  }
+
+  @include bk.medium {
+   margin: 0 2rem;
+    margin-top: -99px;
+  }
+  @include bk.large {
+    margin: 0 8.125rem;
+   margin-top: -99px;
+  }
+
+  &-top {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid cl.$secondaryLight;
+    @include bk.medium {
+      flex-direction: row;
+      align-items: baseline;
+      border: none;
+    }
+    @include bk.large {
+      flex-direction: row;
+      align-items: baseline;
+      border: none;
+      & > :nth-child(1) {
+        flex: 0 0 50%;
+      }
+    }
+    &-form {
+      margin-top: 1.25rem;
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+      @include bk.medium {
+        margin-right: 0;
+      }
+      @include bk.large {
+        margin-right: 0;
+      }
+    }
+    &-title {
+      padding-left: 0.5rem;
+      margin-bottom: 0.5rem;
+      @include bk.large {
+        padding-left: 0;
+      }
+      &-img {
+        background-image: url("../../assets//icons/sort-24px.svg");
+        width: 100%;
+      }
+      &__text {
+        color: cl.$primaryDark;
+      }
+    }
+    &-search {
+      margin-top: 0.25rem;
+
+      @include bk.small {
+        width: 100%;
+      }
+      &__bar {
+        background: cl.$primaryLight;
+        position: relative;
+        border: 1px solid cl.$secondaryLight;
+        border-radius: 20px;
+        background-image: url("../../assets/icons/search-24px.svg");
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 2.25rem;
+        border: 1px solid #bdc5d5;
+        border-radius: 1.25rem;
+        background-position: right 0.594rem center;
+        padding: 0.8rem 1rem;
+        padding-left: 1rem;
+
+        @include bk.medium {
+          width: 185px;
+          height: 38px;
+        }
+
+        @include bk.large {
+          width: 274px;
+          height: 38px;
+        }
+      }
+    }
+    &-btn {
+      @include bk.medium {
+        justify-content: right;
+        display: flex;
+      }
+      @include bk.large {
+        margin-left: 0.75rem;
+      }
+      &--blue {
+        background-color: #2e66e5;
+        width: 100%;
+        height: 2.25rem;
+        border-radius: 1.25rem;
+        padding: 0.5rem 5.25rem;
+        color: #ffffff;
+        font-size: 0.813rem;
+        line-height: 1.25rem;
+        border: none;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+
+        @include bk.medium {
+          margin: 0;
+          margin-left: 1rem;
+          width: 10.5rem;
+          height: 2.375rem;
+          padding: 0.5rem 1rem;
+          font-size: 0.875rem;
+          line-height: 1.375rem;
+        }
+        @include bk.large {
+          margin: 0;
+          margin-left: 1rem;
+          width: 10.5rem;
+          height: 2.375rem;
+          padding: 0.5rem 1rem;
+          font-size: 0.875rem;
+          line-height: 1.375rem;
+        }
+      }
+      &--blue:hover {
+        background-color: cl.$backgroundDark;
+      }
+    }
+  }
+}
+
+// for mobile
+
+@include bk.small {
+  .invList {
+    &__nameContainer {
+      display: flex;
+      justify-content: space-between;
+      padding: 1.5rem 1rem;
+      border-bottom: 1px solid #bdc5d5;
+
+      &-arrow {
+        width: 16px;
+        height: 16px;
+        margin-right: 0.625rem;
+      }
+
+      &-name {
+        width: 145px;
+        height: 36px;
+        font-family: "TitilliumWeb";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 36px;
+      }
+
+      &-editButton {
+        width: 36px;
+        height: 36px;
+        background: #2e66e6;
+        border-radius: 20px;
+        border-color: transparent;
+        background-image: url();
+      }
+    }
+
+    &__info {
+      padding: 1rem 1rem;
+      border-bottom: 1px solid #bdc5d5;
+
+      &-address {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 1.5rem;
+      }
+
+      &-tag {
+        font-family: "TitilliumWeb";
+        font-style: normal;
+        font-weight: 600;
+        color: #5c667e;
+        text-transform: uppercase;
+        font-size: 11px;
+        line-height: 16px;
+      }
+
+      &-text {
+        font-family: "TitilliumWeb";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+        color: #13182c;
+      }
+
+      &-contanct {
+        display: flex;
+        justify-content: space-between;
+
+        &-nameWrap {
+          display: flex;
+          flex-direction: column;
+          width: 140px;
+          align-items: flex-start;
+        }
+
+        &-detailWrap {
+          display: flex;
+          flex-direction: column;
+          width: 140px;
+          align-items: flex-start;
+        }
+      }
+    }
+
+    &__item {
+      border-bottom: 1px solid #bdc5d5;
+      &-info {
+        border-bottom: 1px solid #bdc5d5;
+        padding: 1.5rem 1.5rem 0 1.5rem;
+        &-wrap {
+          display: flex;
+          justify-content: space-between;
+          padding-bottom: 0.5rem;
+        }
+      }
+
+      &-bar {
+        visibility: hidden;
+        height: 0;
+        width: 0;
+      }
+    }
+
+    &__item-info-contanier {
+      display: flex;
+      flex-direction: column;
+      width: 140px;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    &__item-info-tag {
+      font-family: "TitilliumWeb";
+      font-style: normal;
+      font-weight: 600;
+      color: #5c667e;
+
+      font-size: 11px;
+      line-height: 16px;
+      margin-bottom: 0.5rem;
+    }
+
+    &__item-info-nameWrap {
+      position: relative;
+    }
+
+    &__item-info-name {
+      font-family: "TitilliumWeb";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 20px;
+      color: #2e66e6;
+    }
+
+    &__item-info-image {
+      width: 20px;
+      position: absolute;
+      top: 1px;
+      right: -29px;
+    }
+
+    &__item-info-status {
+      display: flex;
+      align-items: center;
+      height: 24px;
+
+      &--inStock {
+        color: cl.$inStock;
+        background: rgba(21, 132, 99, 0.07);
+        border-radius: 20px;
+        color: #158463;
+        padding: 4px 8px;
+        font-weight: 600;
+        font-size: 12px;
+      }
+      &--outOfStock {
+        background: rgba(201, 69, 21, 0.07);
+        border-radius: 20px;
+        font-family: "Titilliumweb";
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        color: #c94515;
+        padding: 4px 8px;
+      }
+    }
+
+    &__item-info-category {
+      font-family: "TitilliumWeb";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+      color: #13182c;
+    }
+
+    &__item-info-num {
+      font-family: "TitilliumWeb";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+      color: #13182c;
+    }
+
+    &__item-info-actions {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 1rem;
+      align-items: baseline;
+    }
+  }
+  .invList__item-info-Tablet {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+}
+
+// for tablet
+
+@include bk.medium {
+  .invList {
+    &__nameContainer {
+      display: flex;
+      justify-content: space-between;
+      padding: 1.5rem 1.5rem;
+      border-bottom: 1px solid #bdc5d5;
+
+      &-arrow {
+        width: 16px;
+        height: 16px;
+        margin-right: 0.625rem;
+      }
+
+      &-name {
+        width: 145px;
+        height: 36px;
+        font-family: "TitilliumWeb";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 36px;
+      }
+
+      &-editButton {
+        width: 81px;
+        height: 38px;
+        background: #2e66e6;
+        border-radius: 20px;
+        border-color: transparent;
+        background-image: url();
+      }
+    }
+
+    &__item {
+      border-bottom: 1px solid #bdc5d5;
+
+      &-bar {
+        padding: 1rem 1.5rem;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        background: rgba(247, 248, 249, 0.7);
+        justify-content: space-between;
+
+        &-wrap {
+          position: relative;
+          display: flex;
+        }
+
+        &-icon {
+          width: 16.12px;
+          height: 12px;
+          position: absolute;
+          top: 4.5px;
+          &__inventory {
+            left: 89px;
+          }
+          &__category {
+            left: 55px;
+          }
+          &__status {
+            left: 40px;
+          }
+          &__qty {
+            left: 20px;
+          }
+          &__warehouse {
+            left: 70px;
+          }
+        }
+
+        &-text {
+          font-family: "TitilliumWeb";
+          font-style: normal;
+          font-weight: 600;
+          color: #5c667e;
+          text-transform: uppercase;
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+
+      &-info {
+        visibility: hidden;
+        height: 0;
+      }
+
+      &-info-Tablet {
+        padding: 1rem 1.5rem;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid cl.$secondaryLight;
+      }
+    }
+
+    &__item-info-nameWrap {
+      display: flex;
+      width: 25%;
+    }
+
+    &__item-info-name {
+      font-family: "TitilliumWeb";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 20px;
+      color: #2e66e6;
+      padding-right: 4px;
+    }
+
+    &__item-info-image {
+      width: 20px;
+      vertical-align: middle;
+    }
+
+    &__item-info-status {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 4px 8px;
+      width: 17%;
+      height: 24px;
+
+      &--inStock {
+        color: cl.$inStock;
+        background: rgba(21, 132, 99, 0.07);
+        border-radius: 20px;
+        color: #158463;
+        padding: 4px 8px;
+        font-weight: 600;
+        font-size: 12px;
+      }
+      &--outOfStock {
+        background: rgba(201, 69, 21, 0.07);
+        border-radius: 20px;
+        font-family: "Titilliumweb";
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        color: #c94515;
+        padding: 4px 8px;
+      }
+    }
+    &__item-info-category {
+      font-family: "TitilliumWeb";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+      color: #13182c;
+      width: 18%;
+      text-align: left;
+    }
+
+    &__item-info-num {
+      font-family: "TitilliumWeb";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+      color: #13182c;
+      width: 11%;
+      text-align: left;
+    }
+
+    &__item-info-warehouse {
+      font-family: "TitilliumWeb";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+      color: #13182c;
+      width: 18%;
+      text-align: left;
+    }
+
+    &__item-info-actions {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 0.5rem;
+      width: 9%;
+      align-items: baseline;
+    }
+  }
+}
+
+// for desktop
+
+@include bk.large {
+  .invList {
+    &-top {
+      padding: 1.5rem 3rem;
+    }
+    &__nameContainer {
+      display: flex;
+      justify-content: space-between;
+      padding: 1.5rem 1.5rem;
+      border-bottom: 1px solid #bdc5d5;
+
+      &-arrow {
+        width: 16px;
+        height: 16px;
+        margin-right: 0.625rem;
+      }
+
+      &-name {
+        width: 145px;
+        height: 36px;
+        font-family: "TitilliumWeb";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 36px;
+      }
+
+      &-editButton {
+        width: 81px;
+        height: 38px;
+        background: #2e66e6;
+        border-radius: 20px;
+        border-color: transparent;
+        background-image: url();
+      }
+    }
+
+    &__info {
+      padding: 1.5rem 1.5rem;
+      border-bottom: 1px solid #bdc5d5;
+      display: flex;
+      justify-content: flex-start;
+
+      &-address {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 150px;
+        text-align: left;
+        margin-right: 17%;
+      }
+
+      &-tag {
+        font-family: "TitilliumWeb";
+        font-style: normal;
+        font-weight: 600;
+        color: #5c667e;
+        text-transform: uppercase;
+        font-size: 11px;
+        line-height: 16px;
+        padding-bottom: 4px;
+      }
+
+      &-text {
+        font-family: "TitilliumWeb";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+        color: #13182c;
+      }
+
+      &-contanct {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 7%;
+        border-left: 1px solid #bdc5d5;
+
+        &-nameWrap {
+          display: flex;
+          flex-direction: column;
+          width: 140px;
+          align-items: flex-start;
+        }
+
+        &-detailWrap {
+          display: flex;
+          flex-direction: column;
+          width: 140px;
+          align-items: flex-start;
+        }
+      }
+    }
+
+    &__item {
+      border-bottom: 1px solid #bdc5d5;
+
+      &-bar {
+        padding: 1rem 3rem;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        background: rgba(247, 248, 249, 0.7);
+
+        &-wrap {
+          position: relative;
+          text-align: left;
+        }
+
+        &-icon {
+          width: 16.12px;
+          height: 12px;
+          position: absolute;
+          top: 4.5px;
+          &__inventory {
+            left: 89px;
+          }
+          &__category {
+            left: 55px;
+          }
+          &__status {
+            left: 40px;
+          }
+          &__qty {
+            left: 20px;
+          }
+          &__warehouse {
+            left: 70px;
+          }
+        }
+
+        &-text {
+          font-weight: 600;
+          color: #5c667e;
+          font-size: 12px;
+          line-height: 18px;
+          display: flex;
+          padding-right: 6.25rem;
+        }
+      }
+
+      &-info {
+        visibility: hidden;
+        height: 0;
+      }
+
+      &-info-Tablet {
+        padding: 1rem 3rem;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #bdc5d5;
+      }
+    }
+
+    &__item-info-nameWrap {
+      display: flex;
+      width: 22%;
+    }
+
+    &__item-info-name {
+      font-family: "TitilliumWeb";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 20px;
+      color: #2e66e6;
+    }
+
+    &__item-info-image {
+      width: 20px;
+      vertical-align: middle;
+    }
+    &__item-info-status {
+      display: flex;
+      align-items: center;
+      height: 24px;
+      width: 18%;
+
+      &--inStock {
+        color: cl.$inStock;
+        background: rgba(21, 132, 99, 0.07);
+        border-radius: 20px;
+        color: #158463;
+        padding: 4px 8px;
+        font-weight: 600;
+        font-size: 12px;
+      }
+      &--outOfStock {
+        background: rgba(201, 69, 21, 0.07);
+        border-radius: 20px;
+        font-family: "Titilliumweb";
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        color: #c94515;
+        padding: 4px 8px;
+      }
+    }
+
+    &__item-info-category {
+      font-family: "TitilliumWeb";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+      color: #13182c;
+      width: 18%;
+      text-align: left;
+    }
+
+    &__item-info-num {
+      font-family: "TitilliumWeb";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+      color: #13182c;
+      width: 15%;
+      text-align: left;
+    }
+    &__item-info-warehouse {
+      width: 15%;
+      font-family: "TitilliumWeb";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+      color: #13182c;
+      width: 18%;
+      text-align: left;
+    }
+    &__item-info-actions {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 0.5rem;
+      width: 7%;
+      align-items: baseline;
+    }
+  }
+
+  .title {
+    &-inv {
+      width: 100%;
+      margin-right: 2.78rem;
+    }
+    &-cat {
+      width: 100%;
+      margin-right: 1rem;
+    }
+    &-sta {
+      width: 100%;
+      margin-right: 1rem;
+    }
+    &-qty {
+      width: 100%;
+      margin-right: 1.5rem;
+    }
+  }
+}
+a {
+  text-decoration: none;
+}
+@include bk.medium {
+  .invItem {
+    width: 25%;
+  }
+  .category {
+    width: 19%;
+  }
+  .status {
+    width: 15%;
+  }
+  .quantity {
+    width: 11%;
+  }
+  .warehouse {
+    width: 18%;
+  }
+  .actions {
+    width: 10.5%;
+  }
+}
+@include bk.large {
+  .invItem {
+    width: 22%;
+  }
+  .category {
+    width: 18%;
+  }
+  .status {
+    width: 18%;
+  }
+  .quantity {
+    width: 15%;
+  }
+  .warehouse {
+    width: 18%;
+  }
+  .actions {
+    width: 9%;
+  }
+}

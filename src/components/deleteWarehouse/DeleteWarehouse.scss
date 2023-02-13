@@ -1,0 +1,226 @@
+@use "../../styles/partials/colors" as cl;
+@use "../../styles/partials/fonts";
+@use "../../styles/partials/breakpoints" as bk;
+@use "../../styles/partials/global";
+
+
+
+
+.warehouselist {
+  background: #13182c;
+  opacity: 0.9;
+}
+
+@include bk.small {
+.warehouseDelete {
+  position: absolute;
+  padding: 1rem;
+  width:100%;
+  height: 100%;
+  background-color: white;
+  display: none;
+  z-index: 999;
+
+  &__icon {
+    display: flex;
+    flex-direction: column;
+    &-wrapper {
+      display: flex;
+      justify-content: right;
+    }
+  }
+  &__title {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    font-weight: 600;
+
+    &-wrapper {
+      padding-top: 1.5rem;
+    }
+  }
+  &__text {
+    font-size: 0.95rem;
+    line-height: 1.625rem;
+    font-weight: 400;
+
+    &-wrapper {
+      padding: 2rem 0;
+    }
+  }
+  &__btn {
+    width: 163px;
+    height: 36px;
+    border-radius: 20px;
+
+    &-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-top: 18rem;
+    }
+    &--cancel {
+      background-color: cl.$primaryLight;
+      border: 1px solid cl.$secondaryLight;
+      color: cl.$secondraryDark;
+      font-weight: 600;
+    }
+    &--delete {
+      background: cl.$outOfStock;
+      border: 1px solid cl.$outOfStock;
+      color: cl.$primaryLight;
+      font-weight: 600;
+    }
+    &--cancel:hover {
+      border: 1px solid cl.$primaryMedium;
+      color: cl.$primaryMedium;
+    }
+    &--delete:hover {
+    background-color: cl.$backgroundDark;
+    }
+  }
+}}
+
+@include bk.medium {
+  .warehouseDelete {
+    padding: 1rem 0;
+    position: absolute;
+    width: 42rem;
+    height: 16.375rem;
+    top: 31%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    display: none;
+    z-index: 999;
+
+    &__icon {
+    display: flex;
+    flex-direction: column;
+
+    &-wrapper {
+      padding-right: 1rem;
+      display: flex;
+      justify-content: right;
+    }
+  }
+
+    &__title {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    font-weight: 600;
+    padding:0 4rem;
+
+   
+  }
+  &__text {
+    font-size: 0.95rem;
+    line-height: 1.625rem;
+    font-weight: 400;
+
+    &-wrapper {
+      padding: 1.5rem 4rem;
+    }
+  }
+  &__btn {
+    width: 163px;
+    height: 36px;
+    border-radius: 20px;
+
+    &-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content:flex-end;
+      padding: 1rem 4rem  0 4rem;
+    }
+    &--cancel {
+      background-color: cl.$primaryLight;
+      border: 1px solid cl.$secondaryLight;
+      color: cl.$secondraryDark;
+      font-weight: 600;
+      width: 4.5rem;
+      margin-right: 2%;
+    }
+    &--delete {
+      background: cl.$outOfStock;
+      border: 1px solid cl.$outOfStock;
+      color: cl.$primaryLight;
+      font-weight: 600;
+       width: 4.5rem;
+    }
+  }
+  }
+}
+@include bk.large {
+ .warehouseDelete {
+    padding: 1rem 0;
+    position: absolute;
+    width: 42rem;
+    height: 16.375rem;
+    top: 31%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    display: none;
+    z-index: 999;
+
+    &__icon {
+    display: flex;
+    flex-direction: column;
+
+    &-wrapper {
+      padding-right: 1rem;
+      display: flex;
+      justify-content: right;
+    }
+  }
+
+    &__title {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    font-weight: 600;
+    padding:0 4rem;
+
+   
+  }
+  &__text {
+    font-size: 0.95rem;
+    line-height: 1.625rem;
+    font-weight: 400;
+
+    &-wrapper {
+      padding: 1.5rem 4rem;
+    }
+  }
+  &__btn {
+    width: 163px;
+    height: 36px;
+    border-radius: 20px;
+
+    &-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content:flex-end;
+      padding: 1rem 4rem  0 4rem;
+    }
+    &--cancel {
+      background-color: cl.$primaryLight;
+      border: 1px solid cl.$secondaryLight;
+      color: cl.$secondraryDark;
+      font-weight: 600;
+      width: 4.5rem;
+      margin-right: 2%;
+    }
+    &--delete {
+      background: cl.$outOfStock;
+      border: 1px solid cl.$outOfStock;
+      color: cl.$primaryLight;
+      font-weight: 600;
+       width: 4.5rem;
+    }
+  }
+  }
+}

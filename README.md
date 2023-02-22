@@ -2,8 +2,6 @@
 
 This was a group project at BrainStation. Our Team called Fernie was a group of 4 devs - Cindy, Daisy, Muskan, and Claire. During our one week deadline, we divided tasks using JIRA agile development workflow. Morning stands-up and meetings were done on Slack on a daily basis.
 
-We learned how important it was to develop and improve our communication skills to increase efficiency. Also, we often faced merge conflicts while using group repo, which was a good lesson for us. After experiencing those merge issues, we became more aware and cautious on the tasks that followed to avoid pitballs. Our checklist before merging or pushing included one question, "Which branch and order am I currently working on?" and always kept in mind, "Always pay attention and communicate with the team!".
-
 [Demo link](https://www.youtube.com/watch?v=mkDwSbr5Rcg)
 
 [Frontend](https://github.com/jclairelee/inStock) | [Backend](https://github.com/jclairelee/inStock-server)
@@ -13,6 +11,10 @@ We learned how important it was to develop and improve our communication skills 
 ![Add New Inventory](./src/assets/screenshot/1.png)
 ![Edit Warehouse](./src/assets/screenshot/6.png)
 ![Delete Warehouse](./src/assets/screenshot/5.png)
+
+### What we learned: 
+
+We learned how important it was to develop and improve our communication skills to increase efficiency. Also, we often faced merge conflicts while using group repo, which was a good lesson for us. After experiencing those merge issues, we became more aware and cautious on the tasks that followed to avoid pitballs. Our checklist before merging or pushing included one question, "Which branch and order am I currently working on?" and always kept in mind to pay attention on every single commit and always communicate with the team.
 
 ## Tech Stack
 

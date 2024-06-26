@@ -1,8 +1,8 @@
 # Instock Inventory Management Web App
+   
+This collaborative project was undertaken at BrainStation by Team Fernie, comprising four developers: Cindy, Daisy, Muskan, and Claire. Over the course of one week, we efficiently managed tasks using the JIRA agile development workflow. Daily stand-ups and meetings were conducted via Slack to ensure consistent progress and effective communication.
 
-This was a group project at BrainStation. Our Team called Fernie was a group of 4 devs - Cindy, Daisy, Muskan, and Claire. During our one week deadline, we divided tasks using JIRA agile development workflow. Morning stands-up and meetings were done on Slack on a daily basis.
-
-[Demo link](https://www.youtube.com/watch?v=mkDwSbr5Rcg)
+[Instock Demo Live](https://instock-fernie.netlify.app) | [Instock Demo Video](https://www.youtube.com/watch?v=mkDwSbr5Rcg) 
 
 [Frontend](https://github.com/jclairelee/inStock) | [Backend](https://github.com/jclairelee/inStock-server)
 
@@ -14,7 +14,7 @@ This was a group project at BrainStation. Our Team called Fernie was a group of 
 
 ### What we learned: 
 
-We learned how important it was to develop and improve our communication skills to increase efficiency. Also, we often faced merge conflicts while using group repo, which was a good lesson for us. After experiencing those merge issues, we became more aware and cautious on the tasks that followed to avoid pitballs. Our checklist before merging or pushing included one question, "Which branch and order am I currently working on?" and always kept in mind to pay attention on every single commit and always communicate with the team.
+Throughout this project, we recognized the critical importance of enhancing our communication skills to boost overall efficiency. Dealing with merge conflicts in our shared repository proved to be a valuable learning experience. These challenges prompted us to adopt a more cautious and proactive approach in subsequent tasks to avoid pitfalls. Our checklist before merging or pushing code now includes a fundamental question: "Which branch and order am I currently working on?" We have also cultivated a habit of meticulously reviewing each commit and maintaining open communication within the team at all times.
 
 ## Tech Stack
 
@@ -23,6 +23,7 @@ We learned how important it was to develop and improve our communication skills 
 - React
 - SASS
 - DOM manipulation
+  
 
 ### Backend:
 
